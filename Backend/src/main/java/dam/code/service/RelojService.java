@@ -8,8 +8,6 @@ import dam.code.models.Reloj;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.time.LocalDate;
-
 public class RelojService {
 
     private final RelojDAO relojDAO = new RelojDAOImpl();
