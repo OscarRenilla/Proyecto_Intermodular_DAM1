@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      stylesheets="/styles/styles.css"
+      fx:controller="dam.code.controller.ComprasController"
+      spacing="10"
+      alignment="CENTER">
+
+    <Label text="Gestión de Relojes" styleClass="title"/>
+
+    <VBox spacing="10" alignment="CENTER">
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Usuario" fx:id="lblUsuario"/>
+            <Button text="Cerrar Sesion" onAction="#cerrarSesion" styleClass="button-close"/>
+        </HBox>
+        <Button text="Relojes" onAction="#relojes" styleClass="btn-secondary"/>
+    </VBox>
+
+    <TableView fx:id="tablaCompras" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="Id"/>
+            <TableColumn fx:id="colTitulo" text="Título"/>
+            <TableColumn fx:id="colDirector" text="Director"/>
+            <TableColumn fx:id="colDuracion" text="Duracion"/>
+            <TableColumn fx:id="colFecha" text="Fecha"/>
+            <TableColumn fx:id="colVisualizaciones" text="Views"/>
+        </columns>
+    </TableView>
+</VBox>
