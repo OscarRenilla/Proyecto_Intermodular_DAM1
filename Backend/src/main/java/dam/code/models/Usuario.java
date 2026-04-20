@@ -1,5 +1,7 @@
 package dam.code.models;
 
+import dam.code.models.utils.Rol;
+
 public class Usuario {
     private int id;
     private String nombre;
@@ -18,7 +20,7 @@ public class Usuario {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
-        this.rol = rol
+        this.rol = rol;
     }
 
     public Usuario(int id, String dni, String nombre, String email,Rol rol) {
