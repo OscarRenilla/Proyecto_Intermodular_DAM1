@@ -42,5 +42,4 @@ public class UsuarioService {
             throw new UsuarioException("La contraseña debe contener al menos un número");
         }
     }
-
 }

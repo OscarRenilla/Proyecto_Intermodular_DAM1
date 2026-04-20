@@ -44,7 +44,7 @@ public class RelojService {
         }
         if (reloj.getPrecio() < 0){
             throw new RelojException("El precio no puede ser negativo");
-        }
+
     }
 
     public ObservableList<Reloj> obtenerRelojsPorUsuario(int idUsuario) throws RelojException {

@@ -12,6 +12,7 @@ public class AppMain extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
+
         UsuarioService service = new UsuarioService();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Inicio_view.fxml"));
