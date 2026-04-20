@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LÆSE - Galería Premium</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">LÆSE</div>
+
+        <div class="buscar-container">
+            <input type="text" id="inputBusqueda" placeholder="Buscar reloj (ej. Rolex)...">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+
+        <div class="header-controls">
+            <select id="selectorTema">
+                <option value="oscuro">Modo Oscuro</option>
+                <option value="claro">Modo Claro</option>
+                <option value="personalizado">Personalizar...</option>
+            </select>
+            <button id="btnAñadir">+ Nuevo Reloj</button>
+        </div>
+    </header>
+
+    <main class="galeria-contenido">
+        <h3 class="titulo-seccion">Colección Exclusiva</h3>
+        
+        <div id="contenedorTarjetas" class="relojes-grid">
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>LÆSE Gallery</h4>
+                <p>Expertos en relojería de lujo desde 2026. Seleccione las piezas más exclusivas del mundo.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">Twitter</a>
+                    <a href="#" class="social-btn">Facebook</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Calle Serrano 45, Madrid</li>
+                    <li>+34 912 345 678</li>
+                    <li>info@laesegallery.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Suscríbete para recibir novedades.</p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Tu email...">
+                    <button type="submit">OK</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 LAESE Gallery. Todos los derechos reservados. Proyecto Final LM.
+        </div>
+    </footer>
+
+    <div id="modalAñadir" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Añadir Nuevo Reloj</h2>
+            <form id="formNuevoReloj">
+                <div class="form-group">
+                    <label for="nuevoTitulo">Título:</label>
+                    <input type="text" id="nuevoTitulo" required placeholder="Ej. Rolex Submariner">
+                </div>
+                <div class="form-group">
+                    <label for="nuevoTexto">Descripción:</label>
+                    <textarea id="nuevoTexto" rows="4" required placeholder="Detalles del reloj..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="nuevaImagen">Imagen (Archivo):</label>
+                    <input type="file" id="nuevaImagen" accept="image/*" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="btnCancelarAñadir">Cancelar</button>
+                    <button type="submit" class="btn-confirm" id="btnConfirmarAñadir">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalPersonalizar" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Personalizar Colores</h2>
+            <form id="formColores">
+                <div class="form-group">
+                    <label for="colorHeader">Color Header:</label>
+                    <input type="color" id="colorHeader" value="#00402e">
+                </div>
+                <div class="form-group">
+                    <label for="colorMain">Color Fondo Principal:</label>
+                    <input type="color" id="colorMain" value="#00402e">
+                </div>
+                <div class="form-group">
+                    <label for="colorFooter">Color Footer:</label>
+                    <input type="color" id="colorFooter" value="#0a0a0a">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="btnCancelarColor">Cancelar</button>
+                    <button type="submit" class="btn-confirm" id="btnAplicarColor">Aplicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="Script/script.js"></script>
+</body>
+</html>
