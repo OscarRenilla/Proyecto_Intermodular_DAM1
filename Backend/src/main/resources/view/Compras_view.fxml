@@ -22,11 +22,11 @@
     <TableView fx:id="tablaCompras" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="colId" text="Id"/>
-            <TableColumn fx:id="colTitulo" text="Título"/>
-            <TableColumn fx:id="colDirector" text="Director"/>
-            <TableColumn fx:id="colDuracion" text="Duracion"/>
-            <TableColumn fx:id="colFecha" text="Fecha"/>
-            <TableColumn fx:id="colVisualizaciones" text="Views"/>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colModelo" text="Modelo"/>
+            <TableColumn fx:id="colDescripcion" text="Descripción"/>
+            <TableColumn fx:id="colStock" text="Stock"/>
+            <TableColumn fx:id="colPrecio" text="Precio"/>
         </columns>
     </TableView>
 </VBox>
