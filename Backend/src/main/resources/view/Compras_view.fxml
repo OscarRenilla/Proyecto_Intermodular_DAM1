@@ -11,12 +11,12 @@
 
     <Label text="Gestión de Relojes" styleClass="title"/>
 
-    <VBox spacing="10" alignment="CENTER">
+        <VBox spacing="10" alignment="CENTER">
         <HBox spacing="10" alignment="CENTER">
             <Label text="Usuario" fx:id="lblUsuario"/>
             <Button text="Cerrar Sesion" onAction="#cerrarSesion" styleClass="button-close"/>
         </HBox>
-        <Button text="Relojes" onAction="#relojes" styleClass="btn-secondary"/>
+        <Button text="Relojes" onAction="#relojs" styleClass="btn-secondary"/>
     </VBox>
 
     <TableView fx:id="tablaCompras" VBox.vgrow="ALWAYS">

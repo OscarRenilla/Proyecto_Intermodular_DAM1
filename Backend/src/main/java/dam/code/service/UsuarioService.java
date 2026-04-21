@@ -8,7 +8,7 @@ import dam.code.models.Usuario;
 public class UsuarioService {
     private final UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
 
-    public Usuario login(String dni, String password) {
+    public Usuario login(String dni, String password) throws UsuarioException {
         return usuarioDAO.login(dni, password);
     }
 

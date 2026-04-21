@@ -33,7 +33,7 @@ public class ComprasController {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-        lblUsuario.setText("Usuario" + usuario.getNombre());
+        lblUsuario.setText("Usuario: " + usuario.getNombre());
     }
 
     public void setRelojService(RelojService service) throws RelojException {

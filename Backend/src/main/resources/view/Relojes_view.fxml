@@ -27,7 +27,7 @@
         <Button text="Compras" onAction="#compras" styleClass="btn-secondary"/>
     </VBox>
 
-    <TableView fx:id="tablaRelojes" VBox.vgrow="ALWAYS">
+    <TableView fx:id="tablaRelojs" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="colId" text="Id"/>
             <TableColumn fx:id="colNombre" text="Nombre"/>

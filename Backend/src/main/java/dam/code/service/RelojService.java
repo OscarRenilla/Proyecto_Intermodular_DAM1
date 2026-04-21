@@ -12,7 +12,7 @@ public class RelojService {
 
     private final RelojDAO relojDAO = new RelojDAOImpl();
 
-    public ObservableList<Reloj> obtenerRelojs() {
+    public ObservableList<Reloj> obtenerRelojs() throws RelojException {
         return FXCollections.observableArrayList(relojDAO.listar());
     }
 
@@ -21,9 +21,8 @@ public class RelojService {
 
     }
 
-    public void agregarReloj(Reloj reloj) {
+    public void agregarReloj(Reloj reloj) throws RelojException {
         validar_reloj(reloj);
-
         relojDAO.registrar(reloj);
     }
 

@@ -67,9 +67,11 @@ public class RelojController {
         colModelo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getModelo()));
         colDescripcion.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDescripcion()));
         colStock.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getStock()).asObject());
-        colStock.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
+        colPrecio.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
 
         txtStock.setEditable(true);
+
+        setCompra();
     }
 
     private void prefWidthColumns() {
@@ -80,8 +82,6 @@ public class RelojController {
         colModelo.prefWidthProperty().bind(tablaRelojs.widthProperty().multiply(0.30));
         colDescripcion.prefWidthProperty().bind(tablaRelojs.widthProperty().multiply(0.15));
         colStock.prefWidthProperty().bind(tablaRelojs.widthProperty().multiply(0.15));
-
-        setCompra();
     }
 
     private void setCompra() {
@@ -145,8 +145,8 @@ public class RelojController {
         return !txtNombre.getText().isBlank()
                 && !txtModelo.getText().isBlank()
                 && !txtDescripcion.getText().isBlank()
-                && txtStock.getText().isBlank()
-                && txtPrecio.getText().isBlank();
+                && !txtStock.getText().isBlank()
+                && !txtPrecio.getText().isBlank();
     }
 
     @FXML
