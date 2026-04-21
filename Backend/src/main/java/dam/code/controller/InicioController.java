@@ -4,6 +4,7 @@ import dam.code.exceptions.RelojException;
 import dam.code.exceptions.UsuarioException;
 import dam.code.models.Sesion;
 import dam.code.models.Usuario;
+import dam.code.models.utils.Rol;
 import dam.code.service.RelojService;
 import dam.code.service.UsuarioService;
 import javafx.fxml.FXML;
@@ -33,30 +34,41 @@ public class InicioController {
     }
 
     @FXML
-    public void iniciarSesion(){
-        if(!validarCampos()) {
+    public void iniciarSesion() {
+        if (!validarCampos()) {
             lblMensaje.setText("Todos los campos son obligatorios");
             lblMensaje.setStyle("-fx-text-fill: red");
             return;
         }
-        String dni = txtDni.getText();
-        String password = txtPassword.getText();
         try {
-            Usuario usuario = service.login(dni, password);
-
+            Usuario usuario = service.login(txtDni.getText(), txtPassword.getText());
             Sesion.setUsuario(usuario);
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Compras_view.fxml"));
-            Parent root = loader.load();
-            ComprasController controller = loader.getController();
-            controller.setUsuario(usuario);
-            controller.setRelojService(new RelojService());
+            RelojService relojService = new RelojService();
 
-            Stage stage = (Stage) txtDni.getScene().getWindow();
-            stage.setResizable(false);
-            stage.setWidth(800);
-            stage.setHeight(600);
-            stage.setScene(new Scene(root));
+            if (usuario.getRol() == Rol.ADMIN) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Relojes_view.fxml"));
+                Parent root = loader.load();
+                RelojController controller = loader.getController();
+                controller.setUsuario(usuario);
+                controller.setRelojService(relojService);
+                Stage stage = (Stage) txtDni.getScene().getWindow();
+                stage.setResizable(false);
+                stage.setWidth(900);
+                stage.setHeight(600);
+                stage.setScene(new Scene(root));
+            } else {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Compras_view.fxml"));
+                Parent root = loader.load();
+                ComprasController controller = loader.getController();
+                controller.setUsuario(usuario);
+                controller.setRelojService(relojService);
+                Stage stage = (Stage) txtDni.getScene().getWindow();
+                stage.setResizable(false);
+                stage.setWidth(800);
+                stage.setHeight(600);
+                stage.setScene(new Scene(root));
+            }
         } catch (RelojException | IOException | UsuarioException e) {
             mostrarError(e.getMessage());
         }
