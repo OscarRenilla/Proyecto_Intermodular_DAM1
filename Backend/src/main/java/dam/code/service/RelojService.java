@@ -47,4 +47,13 @@ public class RelojService {
     public ObservableList<Reloj> obtenerRelojsPorUsuario(int idUsuario) throws RelojException {
         return FXCollections.observableArrayList(relojDAO.obtenerRelojsPorUsuario(idUsuario));
     }
+
+    public void editarReloj(Reloj reloj) throws RelojException {
+        validar_reloj(reloj);
+        relojDAO.actualizar(reloj);
+    }
+
+    public void eliminarReloj(int id) throws RelojException {
+        relojDAO.eliminar(id);
+    }
 }
