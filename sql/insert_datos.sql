@@ -12,56 +12,56 @@ INSERT INTO relojs (nombre, modelo, descripcion, stock, precio) VALUES
 (
   'Rolex Day-Date Rose Gold 40mm Ombré Black',
   '228235',
-  'El Rolex Day-Date 40 ref. 228235 en oro rosa con esfera ombré negra es la combinación perfecta de lujo y elegancia. Su exclusivo acabado en oro Everose de 18k y su distintiva esfera degradada lo convierten en una pieza sofisticada y muy deseada.',
+  'En oro rosa con esfera ombré negra es la combinación perfecta de lujo y elegancia. Su exclusivo acabado en oro Everose de 18k y su distintiva esfera degradada lo convierten en una pieza sofisticada y muy deseada.',
   3,
   45000
 ),
 (
   'Patek Philippe Nautilus',
   '5711',
-  'El Patek Philippe Nautilus 5711 es uno de los relojes más icónicos y codiciados del mundo. Su diseño elegante con carácter deportivo, junto a su inconfundible esfera y acabados de alta relojería, lo convierten en una pieza única.',
+  'Es uno de los relojes más icónicos y codiciados del mundo. Su diseño elegante con carácter deportivo, junto a su inconfundible esfera y acabados de alta relojería, lo convierten en una pieza única.',
   2,
   120000
 ),
 (
   'Omega Speedmaster Moonwatch Moonphase',
   'Co-Axial Master Chronometer 44.25mm Platinum',
-  'El Omega Speedmaster Moonwatch Moonphase Co-Axial Master Chronometer 44.25 mm Platinum es una obra maestra de la relojería, que combina innovación y tradición en un diseño imponente. Su caja de platino, esfera de oro y complicación de fase lunar elevan este modelo a otro nivel de exclusividad. Un reloj sofisticado, preciso y con una presencia inigualable.',
+  'Es una obra maestra de la relojería, que combina innovación y tradición en un diseño imponente. Su caja de platino, esfera de oro y complicación de fase lunar elevan este modelo a otro nivel de exclusividad. Un reloj sofisticado, preciso y con una presencia inigualable.',
   5,
   35000
 ),
 (
   'Rolex GMT-Master II',
   'GMT-Master II',
-  'El Rolex GMT-Master II es un reloj de lujo diseñado para viajeros y profesionales que necesitan seguir múltiples zonas horarias. Con su icónica función GMT, su robusta construcción y su diseño atemporal, este reloj se ha convertido en un símbolo de prestigio y funcionalidad en el mundo de la relojería.',
+  'Lujo diseñado para viajeros y profesionales que necesitan seguir múltiples zonas horarias. Con su icónica función GMT, su robusta construcción y su diseño atemporal, este reloj se ha convertido en un símbolo de prestigio y funcionalidad en el mundo de la relojería.',
   8,
   18000
 ),
 (
   'Hublot Big Bang Unico Dark Green Ceramic',
   'Big Bang Unico',
-  'El Hublot Big Bang Unico Dark Green Ceramic es un reloj de lujo que destaca por su diseño audaz y su innovación técnica. Con su caja de cerámica, movimiento Unico de manufactura propia y su estética vanguardista, este reloj se ha convertido en un símbolo de exclusividad y estilo en el mundo de la alta relojería.',
+  'Destaca por su diseño audaz y su innovación técnica. Con su caja de cerámica, movimiento Unico de manufactura propia y su estética vanguardista, este reloj se ha convertido en un símbolo de exclusividad y estilo en el mundo de la alta relojería.',
   4,
   25000
 ),
 (
   'Jacob and Co. Astronomia Casino Roulette Tourbillon',
   'Astronomia Casino',
-  'El Jacob and Co. Astronomia Casino Roulette Tourbillon es pura extravagancia y alta relojería llevadas al extremo. Su diseño tridimensional con ruleta funcional y tourbillon lo convierte en una pieza única que no pasa desapercibida. Un reloj exclusivo para quienes buscan lujo, innovación y espectáculo en la muñeca.',
+  'Pura extravagancia y alta relojería llevadas al extremo. Su diseño tridimensional con ruleta funcional y tourbillon lo convierte en una pieza única que no pasa desapercibida. Un reloj exclusivo para quienes buscan lujo, innovación y espectáculo en la muñeca.',
   1,
   580000
 ),
 (
   'Richard Mille RM 30-01',
   'RM 30-01',
-  'El Richard Mille RM 30-01 es un reloj de alta relojería diseñado para resistir las condiciones extremas del tenis profesional. Con su caja de titanio y carbono, su movimiento tourbillon y su diseño vanguardista, este reloj es una obra maestra de la ingeniería y la innovación, que combina resistencia, precisión y estilo en una pieza única.',
+  'Diseñado para resistir las condiciones extremas del tenis profesional. Con su caja de titanio y carbono, su movimiento tourbillon y su diseño vanguardista, este reloj es una obra maestra de la ingeniería y la innovación, que combina resistencia, precisión y estilo en una pieza única.',
   2,
   150000
 ),
 (
   'Tissot PRX',
   'PRX Powermatic 80',
-  'El Tissot PRX es un reloj de lujo que combina estilo y funcionalidad en un diseño atemporal. Con su caja de acero inoxidable, esfera con indicadores de hora y minutero, y su movimiento automático, este reloj es una elección perfecta para quienes buscan calidad y durabilidad en su accesorio.',
+  'Combina estilo y funcionalidad en un diseño atemporal. Con su caja de acero inoxidable, esfera con indicadores de hora y minutero, y su movimiento automático, este reloj es una elección perfecta para quienes buscan calidad y durabilidad en su accesorio.',
   20,
   750
 );
