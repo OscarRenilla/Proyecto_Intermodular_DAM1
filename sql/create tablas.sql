@@ -13,7 +13,7 @@ CREATE TABLE relojs (
 	modelo VARCHAR(150),
 	descripcion VARCHAR(500),
 	stock INT, 
-	precio INT CHECK (precio < 0)
+	precio INT
 );
 
 CREATE TABLE compras (
