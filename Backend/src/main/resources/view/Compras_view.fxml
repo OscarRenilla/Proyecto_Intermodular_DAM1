@@ -17,27 +17,31 @@
     </HBox>
 
     <Label text="Catálogo — doble clic para comprar" styleClass="subtitle"/>
-    <TableView fx:id="tablaRelojs" VBox.vgrow="ALWAYS">
-        <columns>
-            <TableColumn fx:id="colCatId" text="Id"/>
-            <TableColumn fx:id="colCatNombre" text="Nombre"/>
-            <TableColumn fx:id="colCatModelo" text="Modelo"/>
-            <TableColumn fx:id="colCatDescripcion" text="Descripción"/>
-            <TableColumn fx:id="colCatStock" text="Stock"/>
-            <TableColumn fx:id="colCatPrecio" text="Precio"/>
-        </columns>
-    </TableView>
+    <ScrollPane fitToHeight="true" fitToWidth="false" hbarPolicy="ALWAYS" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tablaRelojs" minWidth="900">
+            <columns>
+                <TableColumn fx:id="colCatId" text="Id" minWidth="50"/>
+                <TableColumn fx:id="colCatNombre" text="Nombre" minWidth="150"/>
+                <TableColumn fx:id="colCatModelo" text="Modelo" minWidth="150"/>
+                <TableColumn fx:id="colCatDescripcion" text="Descripción" minWidth="250"/>
+                <TableColumn fx:id="colCatStock" text="Stock" minWidth="80"/>
+                <TableColumn fx:id="colCatPrecio" text="Precio" minWidth="80"/>
+            </columns>
+        </TableView>
+    </ScrollPane>
 
     <Label text="Mis compras" styleClass="subtitle"/>
-    <TableView fx:id="tablaCompras" VBox.vgrow="ALWAYS">
-        <columns>
-            <TableColumn fx:id="colId" text="Id"/>
-            <TableColumn fx:id="colNombre" text="Nombre"/>
-            <TableColumn fx:id="colModelo" text="Modelo"/>
-            <TableColumn fx:id="colDescripcion" text="Descripción"/>
-            <TableColumn fx:id="colStock" text="Stock"/>
-            <TableColumn fx:id="colPrecio" text="Precio"/>
-        </columns>
-    </TableView>
+    <ScrollPane fitToHeight="true" fitToWidth="false" hbarPolicy="ALWAYS" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tablaCompras" minWidth="900">
+            <columns>
+                <TableColumn fx:id="colId" text="Id" minWidth="50"/>
+                <TableColumn fx:id="colNombre" text="Nombre" minWidth="150"/>
+                <TableColumn fx:id="colModelo" text="Modelo" minWidth="150"/>
+                <TableColumn fx:id="colDescripcion" text="Descripción" minWidth="250"/>
+                <TableColumn fx:id="colStock" text="Stock" minWidth="80"/>
+                <TableColumn fx:id="colPrecio" text="Precio" minWidth="80"/>
+            </columns>
+        </TableView>
+    </ScrollPane>
 
 </VBox>

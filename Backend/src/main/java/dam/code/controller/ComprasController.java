@@ -51,7 +51,6 @@ public class ComprasController {
 
     @FXML
     private void initialize() {
-        // Catálogo
         colCatId.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getId()).asObject());
         colCatNombre.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNombre()));
         colCatModelo.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getModelo()));
@@ -59,7 +58,6 @@ public class ComprasController {
         colCatStock.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getStock()).asObject());
         colCatPrecio.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getPrecio()).asObject());
 
-        // Mis compras
         colId.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getId()).asObject());
         colNombre.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNombre()));
         colModelo.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getModelo()));
@@ -67,10 +65,6 @@ public class ComprasController {
         colStock.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getStock()).asObject());
         colPrecio.setCellValueFactory(c -> new SimpleIntegerProperty(c.getValue().getPrecio()).asObject());
 
-        tablaRelojs.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
-        tablaCompras.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
-
-        // Doble clic en catálogo para comprar
         tablaRelojs.setRowFactory(tv -> {
             TableRow<Reloj> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
