@@ -109,4 +109,33 @@ public class RelojDAOImpl implements RelojDAO {
             throw new RelojException(e.getMessage());
         }
     }
+
+    @Override
+    public void actualizar(Reloj reloj) throws RelojException {
+        String sql = "UPDATE relojs SET nombre=?, modelo=?, descripcion=?, stock=?, precio=? WHERE id=?";
+        try (Connection con = DatabaseConfig.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setString(1, reloj.getNombre());
+            ps.setString(2, reloj.getModelo());
+            ps.setString(3, reloj.getDescripcion());
+            ps.setInt(4, reloj.getStock());
+            ps.setInt(5, reloj.getPrecio());
+            ps.setInt(6, reloj.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RelojException(e.getMessage());
+        }
+    }
+
+    @Override
+    public void eliminar(int id) throws RelojException {
+        String sql = "DELETE FROM relojs WHERE id=?";
+        try (Connection con = DatabaseConfig.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RelojException(e.getMessage());
+        }
+    }
 }

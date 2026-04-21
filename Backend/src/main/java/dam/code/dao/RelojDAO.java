@@ -10,4 +10,6 @@ public interface RelojDAO {
     List<Reloj> listar() throws RelojException;
     List<Reloj> obtenerRelojsPorUsuario(int idUsuario) throws RelojException;
     void comprar(int idUsuario, int idReloj) throws RelojException;
+    void actualizar(Reloj reloj) throws RelojException;
+    void eliminar(int id) throws RelojException;
 }
