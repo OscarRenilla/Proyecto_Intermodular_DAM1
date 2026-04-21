@@ -1,10 +1,10 @@
 -- USUARIOS (datos de ejemplo)
 INSERT INTO usuarios (dni, nombre, email, password, rol) VALUES
-('12345678A', 'Carlos García López',    'carlos.garcia@email.com',  '$2b$10$examplehashedpassword1', 'admin'),
-('23456789B', 'María Martínez Ruiz',    'maria.martinez@email.com', '$2b$10$examplehashedpassword2', 'cliente'),
-('34567890C', 'Alejandro Sánchez Mora', 'alex.sanchez@email.com',   '$2b$10$examplehashedpassword3', 'cliente'),
-('45678901D', 'Laura Fernández Gil',    'laura.fernandez@email.com','$2b$10$examplehashedpassword4', 'cliente'),
-('56789012E', 'Pedro Jiménez Castro',   'pedro.jimenez@email.com',  '$2b$10$examplehashedpassword5', 'cliente');
+('12345678A', 'Carlos García López',    'carlos.garcia@email.com',  '$2b$10$examplehashedpassword1', 'ADMIN'),
+('23456789B', 'María Martínez Ruiz',    'maria.martinez@email.com', '$2b$10$examplehashedpassword2', 'USER'),
+('34567890C', 'Alejandro Sánchez Mora', 'alex.sanchez@email.com',   '$2b$10$examplehashedpassword3', 'USER'),
+('45678901D', 'Laura Fernández Gil',    'laura.fernandez@email.com','$2b$10$examplehashedpassword4', 'USER'),
+('56789012E', 'Pedro Jiménez Castro',   'pedro.jimenez@email.com',  '$2b$10$examplehashedpassword5', 'USER');
 
 
 -- RELOJES
