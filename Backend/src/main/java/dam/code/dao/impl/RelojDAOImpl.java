@@ -20,9 +20,9 @@ public class RelojDAOImpl implements RelojDAO {
 
             ps.setString(1, reloj.getNombre());
             ps.setString(2, reloj.getModelo());
-            ps.setInt(3, reloj.detDescripcion());
+            ps.setString(3, reloj.getDescripcion());
             ps.setInt(4, reloj.getStock());
-            ps.setDate(5, Date.valueOf(reloj.getPrecio()));
+            ps.setDouble(5, reloj.getPrecio());
 
             ps.executeUpdate();
 
@@ -45,9 +45,9 @@ public class RelojDAOImpl implements RelojDAO {
                         rs.getInt("id"),
                         rs.getString("nombre"),
                         rs.getString("modelo"),
-                        rs.getInt("descripcion"),
-                        rs.getDate("stock"),
-                        rs.getDate("precio")
+                        rs.getString("descripcion"),
+                        rs.getInt("stock"),
+                        rs.getInt("precio")
                 ));
             }
 
@@ -62,9 +62,9 @@ public class RelojDAOImpl implements RelojDAO {
         List<Reloj> relojs = new ArrayList<>();
         String sql = """
                 SELECT p.id, p.nombre, p.modelo, p.descripcion, p.stock, p.precio,
-                    COUNT(v.id_reloj) AS visualizaciones
+                    COUNT(v.id_reloj) AS compras
                 FROM relojs p
-                INNER JOIN visualizaciones v ON p.id = v.id_reloj
+                INNER JOIN compras v ON p.id = v.id_reloj
                 WHERE v.id_usuario = ?
                 GROUP BY p.id, p.nombre, p.modelo, p.descripcion, p.stock, p.precio
                 """;
@@ -80,9 +80,9 @@ public class RelojDAOImpl implements RelojDAO {
                         rs.getInt("id"),
                         rs.getString("nombre"),
                         rs.getString("modelo"),
-                        rs.getInt("descripcion"),
-                        rs.getDate("stock"),
-                        rs.getDate("precio")
+                        rs.getString("descripcion"),
+                        rs.getInt("stock"),
+                        rs.getInt("precio")
                 );
                 reloj.setCompras(rs.getInt("compras"));
                 relojs.add(reloj);
@@ -94,7 +94,7 @@ public class RelojDAOImpl implements RelojDAO {
     }
 
     @Override
-    public void visualizar(int idUsuario, int idReloj) throws RelojException {
+    public void comprar(int idUsuario, int idReloj) throws RelojException {
         String sql = "INSERT INTO compras (id_usuario, id_reloj) VALUES (?, ?)";
 
         try (Connection con = DatabaseConfig.getConnection();

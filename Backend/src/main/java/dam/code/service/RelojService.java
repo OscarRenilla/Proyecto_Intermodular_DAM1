@@ -16,7 +16,7 @@ public class RelojService {
         return FXCollections.observableArrayList(relojDAO.listar());
     }
 
-    public void addVisualizacion(int idUsuario, Reloj reloj) throws RelojException {
+    public void addCompra(int idUsuario, Reloj reloj) throws RelojException {
         relojDAO.comprar(idUsuario, reloj.getId());
 
     }

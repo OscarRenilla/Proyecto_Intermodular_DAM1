@@ -23,7 +23,7 @@ public class AppMain extends Application {
         controller.setUsuarioService(service);
 
         stage.setScene(new Scene(root));
-        stage.setTitle("Cinesa");
+        stage.setTitle("Cronoss");
         stage.setResizable(false);
         stage.setWidth(400);
         stage.setHeight(600);

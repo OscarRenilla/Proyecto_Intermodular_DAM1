@@ -6,26 +6,26 @@ public class Reloj {
     private String modelo;
     private String descripcion;
     private int stock;
-    private double precio;
+    private int precio;
     private int compras;
 
-    public Reloj(String nombre, String modelo, String descripcion, int stock, double precio, int compras) {
+    public Reloj(String nombre, String modelo, String descripcion, int stock, int precio) {
         this.nombre = nombre;
         this.modelo = modelo;
         this.descripcion = descripcion;
         this.stock = stock;
         this.precio = precio;
-        this.compras = compras = 0;
+        this.compras = 0;
     }
 
-    public Reloj(int id, String nombre, String modelo, String descripcion, int stock, double precio, int compras){
+    public Reloj(int id, String nombre, String modelo, String descripcion, int stock, int precio) {
         this.id = id;
         this.nombre = nombre;
         this.modelo = modelo;
         this.descripcion = descripcion;
         this.stock = stock;
         this.precio = precio;
-        this.compras = compras = 0;
+        this.compras = 0;
     }
 
     public int getId() {
@@ -68,11 +68,11 @@ public class Reloj {
         this.stock = stock;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
