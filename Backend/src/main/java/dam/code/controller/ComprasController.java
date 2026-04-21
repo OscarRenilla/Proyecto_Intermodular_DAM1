@@ -125,4 +125,5 @@ public class ComprasController {
         alerta.setContentText(mensaje);
         alerta.showAndWait();
     }
+
 }
