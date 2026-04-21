@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      stylesheets="/styles/styles.css"
+      fx:controller="dam.code.controller.ComprasController"
+      spacing="10"
+      alignment="CENTER">
+
+    <Label text="Tienda de Relojes" styleClass="title"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label fx:id="lblUsuario"/>
+        <Button text="Cerrar Sesión" onAction="#cerrarSesion" styleClass="button-close"/>
+    </HBox>
+
+    <Label text="Catálogo — doble clic para comprar" styleClass="subtitle"/>
+    <ScrollPane fitToHeight="true" fitToWidth="false" hbarPolicy="ALWAYS" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tablaRelojs" minWidth="900">
+            <columns>
+                <TableColumn fx:id="colCatId" text="Id" minWidth="50"/>
+                <TableColumn fx:id="colCatNombre" text="Nombre" minWidth="150"/>
+                <TableColumn fx:id="colCatModelo" text="Modelo" minWidth="150"/>
+                <TableColumn fx:id="colCatDescripcion" text="Descripción" minWidth="250"/>
+                <TableColumn fx:id="colCatStock" text="Stock" minWidth="80"/>
+                <TableColumn fx:id="colCatPrecio" text="Precio" minWidth="80"/>
+            </columns>
+        </TableView>
+    </ScrollPane>
+
+    <Label text="Mis compras" styleClass="subtitle"/>
+    <ScrollPane fitToHeight="true" fitToWidth="false" hbarPolicy="ALWAYS" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+        <TableView fx:id="tablaCompras" minWidth="900">
+            <columns>
+                <TableColumn fx:id="colId" text="Id" minWidth="50"/>
+                <TableColumn fx:id="colNombre" text="Nombre" minWidth="150"/>
+                <TableColumn fx:id="colModelo" text="Modelo" minWidth="150"/>
+                <TableColumn fx:id="colDescripcion" text="Descripción" minWidth="250"/>
+                <TableColumn fx:id="colStock" text="Stock" minWidth="80"/>
+                <TableColumn fx:id="colPrecio" text="Precio" minWidth="80"/>
+            </columns>
+        </TableView>
+    </ScrollPane>
+
+</VBox>
