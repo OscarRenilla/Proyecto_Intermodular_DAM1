@@ -71,10 +71,10 @@ INSERT INTO relojs (nombre, modelo, descripcion, stock, precio) VALUES
 
 -- COMPRAS (relaciones de ejemplo entre usuarios y relojes)
 INSERT INTO compras (id_usuario, id_reloj) VALUES
-(2, 4), 
-(2, 8), 
+(1, 4),
+(1, 8),
 (3, 1), 
-(4, 3), 
+(3, 3),
 (5, 5), 
-(3, 8), 
-(4, 8); 
+(5, 8),
+(7, 8);
