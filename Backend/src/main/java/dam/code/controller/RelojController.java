@@ -56,7 +56,7 @@ public class RelojController {
 
     public void setRelojService(RelojService service) throws RelojException {
         this.service = service;
-        tablaRelojs.setItems(service.obtenerRelojsPorUsuario());
+        tablaRelojs.setItems(service.obtenerRelojs());
     }
 
     @FXML
@@ -98,7 +98,7 @@ public class RelojController {
                         if (response == ButtonType.OK) {
                             try {
                                 service.addCompra(usuario.getId(), reloj);
-                                tablaRelojs.setItems(service.obtenerRelojsPorUsuario());
+                                tablaRelojs.setItems(service.obtenerRelojs());
                             } catch (RelojException e) {
                                 mostrarError(e.getMessage());
                             }
@@ -137,16 +137,16 @@ public class RelojController {
         txtNombre.clear();
         txtModelo.clear();
         txtDescripcion.clear();
-        txtStock.setValue(null);
-        txtPrecio.setValue(null);
+        txtStock.clear();
+        txtPrecio.clear();
     }
 
     private boolean validarCampos() {
         return !txtNombre.getText().isBlank()
                 && !txtModelo.getText().isBlank()
                 && !txtDescripcion.getText().isBlank()
-                && txtStock.getValue() != null
-                && txtPrecio.getValue() != null;
+                && txtStock.getText().isBlank()
+                && txtPrecio.getText().isBlank();
     }
 
     @FXML

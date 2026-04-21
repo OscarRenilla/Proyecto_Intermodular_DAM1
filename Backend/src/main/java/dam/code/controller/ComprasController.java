@@ -54,7 +54,7 @@ public class ComprasController {
         colStock.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getStock()).asObject());
         colPrecio.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getPrecio()).asObject());
 
-        setVisualizacion();
+        setCompra();
     }
 
     private void prefWidthColumns() {
@@ -68,7 +68,7 @@ public class ComprasController {
         colPrecio.prefWidthProperty().bind(tablaCompras.widthProperty().multiply(0.05));
     }
 
-    private void setVisualizacion() {
+    private void setCompra() {
         tablaCompras.setRowFactory(tv -> {
             TableRow<Reloj> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
