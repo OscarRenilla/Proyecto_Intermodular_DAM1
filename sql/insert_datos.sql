@@ -1,6 +1,6 @@
 -- USUARIOS (datos de ejemplo)
 INSERT INTO usuarios (dni, nombre, email, password, rol) VALUES
-('12345678O', 'ÓscarUser', 'oscar.user@email.com', 'Abc@123', 'USER'),
+('12345678O', 'ÓscarUser', 'oscar.user@email.com', '$2a$10$8tpgz.7fvSxmCnO/KDxM/ePlaVxipZiIkiFVqaho.tFgmFABide7G', 'USER'),
 ('87654321O', 'ÓscarAdmin', 'oscar.admin@email.com', 'Abc@123', 'ADMIN'),
 ('12345678S', 'SebasUser', 'sebas.user@email.com', 'Abc@123', 'USER'),
 ('87654321S', 'SebasAdmin', 'sebas.admin@email.com','Abc@123', 'ADMIN'),
