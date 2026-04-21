@@ -1,11 +1,10 @@
 package dam.code.controller;
 
-import dam.code.exception.RelojException;
+import dam.code.exceptions.RelojException;
 import dam.code.models.Reloj;
 import dam.code.models.Usuario;
 import dam.code.service.RelojService;
 import dam.code.service.UsuarioService;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;

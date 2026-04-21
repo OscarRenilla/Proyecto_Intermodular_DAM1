@@ -2,7 +2,7 @@ package dam.code.service;
 
 import dam.code.dao.UsuarioDAO;
 import dam.code.dao.impl.UsuarioDAOImpl;
-import dam.code.exception.UsuarioException;
+import dam.code.exceptions.UsuarioException;
 import dam.code.models.Usuario;
 
 public class UsuarioService {

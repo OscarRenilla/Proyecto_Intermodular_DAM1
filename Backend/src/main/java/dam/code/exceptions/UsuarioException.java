@@ -1,4 +1,4 @@
-package dam.code.exception;
+package dam.code.exceptions;
 
 public class UsuarioException extends RuntimeException {
     public UsuarioException(String message) {

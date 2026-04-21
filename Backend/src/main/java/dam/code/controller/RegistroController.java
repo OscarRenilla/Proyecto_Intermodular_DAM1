@@ -1,6 +1,6 @@
 package dam.code.controller;
 
-import dam.code.exception.UsuarioException;
+import dam.code.exceptions.UsuarioException;
 import dam.code.models.Usuario;
 import dam.code.models.utils.Rol;
 import dam.code.service.UsuarioService;

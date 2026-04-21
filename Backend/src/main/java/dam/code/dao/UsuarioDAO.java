@@ -1,6 +1,6 @@
 package dam.code.dao;
 
-import dam.code.exception.UsuarioException;
+import dam.code.exceptions.UsuarioException;
 import dam.code.models.Usuario;
 
 public interface UsuarioDAO {

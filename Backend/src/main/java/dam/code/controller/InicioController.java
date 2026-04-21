@@ -1,7 +1,7 @@
 package dam.code.controller;
 
-import dam.code.exception.RelojException;
-import dam.code.exception.UsuarioException;
+import dam.code.exceptions.RelojException;
+import dam.code.exceptions.UsuarioException;
 import dam.code.models.Sesion;
 import dam.code.models.Usuario;
 import dam.code.service.RelojService;

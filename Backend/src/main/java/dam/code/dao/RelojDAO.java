@@ -1,6 +1,6 @@
 package dam.code.dao;
 
-import dam.code.exception.RelojException;
+import dam.code.exceptions.RelojException;
 import dam.code.models.Reloj;
 
 import java.util.List;

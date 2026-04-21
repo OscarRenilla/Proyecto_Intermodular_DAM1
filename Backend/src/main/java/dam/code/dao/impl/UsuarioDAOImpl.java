@@ -2,7 +2,7 @@ package dam.code.dao.impl;
 
 import dam.code.config.DatabaseConfig;
 import dam.code.dao.UsuarioDAO;
-import dam.code.exception.UsuarioException;
+import dam.code.exceptions.UsuarioException;
 import dam.code.models.Usuario;
 import dam.code.models.utils.Rol;
 import dam.code.utils.CryptPassword;

@@ -3,7 +3,7 @@ package dam.code.service;
 import dam.code.dao.RelojDAO;
 import dam.code.dao.impl.RelojDAOImpl;
 
-import dam.code.exception.RelojException;
+import dam.code.exceptions.RelojException;
 import dam.code.models.Reloj;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

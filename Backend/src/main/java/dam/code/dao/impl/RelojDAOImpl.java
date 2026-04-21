@@ -2,7 +2,7 @@ package dam.code.dao.impl;
 
 import dam.code.config.DatabaseConfig;
 import dam.code.dao.RelojDAO;
-import dam.code.exception.RelojException;
+import dam.code.exceptions.RelojException;
 import dam.code.models.Reloj;
 
 import java.sql.*;
