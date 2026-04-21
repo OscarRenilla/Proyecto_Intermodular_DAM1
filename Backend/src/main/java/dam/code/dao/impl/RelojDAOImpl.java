@@ -95,15 +95,38 @@ public class RelojDAOImpl implements RelojDAO {
 
     @Override
     public void comprar(int idUsuario, int idReloj) throws RelojException {
-        String sql = "INSERT INTO compras (id_usuario, id_reloj) VALUES (?, ?)";
+        String sqlCheck = "SELECT stock FROM relojs WHERE id = ?";
+        String sqlCompra = "INSERT INTO compras (id_usuario, id_reloj) VALUES (?, ?)";
+        String sqlStock = "UPDATE relojs SET stock = stock - 1 WHERE id = ?";
 
-        try (Connection con = DatabaseConfig.getConnection();
-             PreparedStatement ps = con.prepareStatement(sql)) {
+        try (Connection con = DatabaseConfig.getConnection()) {
+            con.setAutoCommit(false);
 
-            ps.setInt(1, idUsuario);
-            ps.setInt(2, idReloj);
+            try (PreparedStatement psCheck = con.prepareStatement(sqlCheck)) {
+                psCheck.setInt(1, idReloj);
+                ResultSet rs = psCheck.executeQuery();
+                if (rs.next()) {
+                    int stock = rs.getInt("stock");
+                    if (stock <= 0) {
+                        throw new RelojException("No hay stock disponible para este reloj.");
+                    }
+                } else {
+                    throw new RelojException("El reloj no existe.");
+                }
+            }
 
-            ps.executeUpdate();
+            try (PreparedStatement psCompra = con.prepareStatement(sqlCompra)) {
+                psCompra.setInt(1, idUsuario);
+                psCompra.setInt(2, idReloj);
+                psCompra.executeUpdate();
+            }
+
+            try (PreparedStatement psStock = con.prepareStatement(sqlStock)) {
+                psStock.setInt(1, idReloj);
+                psStock.executeUpdate();
+            }
+
+            con.commit();
 
         } catch (SQLException e) {
             throw new RelojException(e.getMessage());
