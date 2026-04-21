@@ -29,7 +29,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>dam.code/dam.code.AppMain</mainClass>
+                    <mainClass>dam.code.AppMain</mainClass>
                 </configuration>
             </plugin>
         </plugins>
