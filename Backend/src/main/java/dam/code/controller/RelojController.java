@@ -51,7 +51,7 @@ public class RelojController {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-        lblUsuario.setText("Usuario:" + usuario.getNombre());
+        lblUsuario.setText("Usuario: " + usuario.getNombre());
     }
 
     public void setRelojService(RelojService service) throws RelojException {
@@ -92,8 +92,8 @@ public class RelojController {
                     Reloj reloj = row.getItem();
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setTitle("Compras");
-                    alert.setHeaderText("Añador compra");
-                    alert.setContentText("¿Quieres añadir una compra al reloj " + reloj.getModelo() + " de " + reloj.getNombre() + "?");
+                    alert.setHeaderText("Comprar Reloj");
+                    alert.setContentText("¿Quieres comprar el reloj " + reloj.getModelo() + " de " + reloj.getNombre() + "?");
                     alert.showAndWait().ifPresent(response -> {
                         if (response == ButtonType.OK) {
                             try {
