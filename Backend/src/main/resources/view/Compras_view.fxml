@@ -9,16 +9,26 @@
       spacing="10"
       alignment="CENTER">
 
-    <Label text="Gestión de Relojes" styleClass="title"/>
+    <Label text="Tienda de Relojes" styleClass="title"/>
 
-        <VBox spacing="10" alignment="CENTER">
-        <HBox spacing="10" alignment="CENTER">
-            <Label text="Usuario" fx:id="lblUsuario"/>
-            <Button text="Cerrar Sesion" onAction="#cerrarSesion" styleClass="button-close"/>
-        </HBox>
-        <Button text="Relojes" onAction="#relojs" styleClass="btn-secondary"/>
-    </VBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Label fx:id="lblUsuario"/>
+        <Button text="Cerrar Sesión" onAction="#cerrarSesion" styleClass="button-close"/>
+    </HBox>
 
+    <Label text="Catálogo — doble clic para comprar" styleClass="subtitle"/>
+    <TableView fx:id="tablaRelojs" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colCatId" text="Id"/>
+            <TableColumn fx:id="colCatNombre" text="Nombre"/>
+            <TableColumn fx:id="colCatModelo" text="Modelo"/>
+            <TableColumn fx:id="colCatDescripcion" text="Descripción"/>
+            <TableColumn fx:id="colCatStock" text="Stock"/>
+            <TableColumn fx:id="colCatPrecio" text="Precio"/>
+        </columns>
+    </TableView>
+
+    <Label text="Mis compras" styleClass="subtitle"/>
     <TableView fx:id="tablaCompras" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="colId" text="Id"/>
@@ -29,4 +39,5 @@
             <TableColumn fx:id="colPrecio" text="Precio"/>
         </columns>
     </TableView>
+
 </VBox>
