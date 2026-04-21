@@ -1,11 +1,13 @@
 -- USUARIOS (datos de ejemplo)
 INSERT INTO usuarios (dni, nombre, email, password, rol) VALUES
-('12345678A', 'Carlos García López',    'carlos.garcia@email.com',  '$2b$10$examplehashedpassword1', 'ADMIN'),
-('23456789B', 'María Martínez Ruiz',    'maria.martinez@email.com', '$2b$10$examplehashedpassword2', 'USER'),
-('34567890C', 'Alejandro Sánchez Mora', 'alex.sanchez@email.com',   '$2b$10$examplehashedpassword3', 'USER'),
-('45678901D', 'Laura Fernández Gil',    'laura.fernandez@email.com','$2b$10$examplehashedpassword4', 'USER'),
-('56789012E', 'Pedro Jiménez Castro',   'pedro.jimenez@email.com',  '$2b$10$examplehashedpassword5', 'USER');
-
+('12345678O', 'ÓscarUser', 'oscar.user@email.com', 'Abc@123', 'USER'),
+('87654321O', 'ÓscarAdmin', 'oscar.admin@email.com', 'Abc@123', 'ADMIN'),
+('12345678S', 'SebasUser', 'sebas.user@email.com', 'Abc@123', 'USER'),
+('87654321S', 'SebasAdmin', 'sebas.admin@email.com','Abc@123', 'ADMIN'),
+('12345678M', 'MarcelUser', 'marcel.user@email.com', 'Abc@123', 'USER'),
+('87654321M', 'MarcelAdmin', 'marcel.admin@email.com', 'Abc@123', 'ADMIN'),
+('12345678A', 'AlvaroUser', 'alvaro.user@email.com', 'Abc@123', 'USER'),
+('87654321A', 'AlvaroAdmi', 'alvaro.admin@email.com','Abc@123', 'ADMIN');
 
 -- RELOJES
 INSERT INTO relojs (nombre, modelo, descripcion, stock, precio) VALUES
@@ -69,10 +71,10 @@ INSERT INTO relojs (nombre, modelo, descripcion, stock, precio) VALUES
 
 -- COMPRAS (relaciones de ejemplo entre usuarios y relojes)
 INSERT INTO compras (id_usuario, id_reloj) VALUES
-(2, 4),  -- María compra Rolex GMT-Master II
-(2, 8),  -- María compra Tissot PRX
-(3, 1),  -- Alejandro compra Rolex Day-Date
-(4, 3),  -- Laura compra Omega Speedmaster
-(5, 5),  -- Pedro compra Hublot Big Bang
-(3, 8),  -- Alejandro compra Tissot PRX
-(4, 8);  -- Laura compra Tissot PRX
+(2, 4), 
+(2, 8), 
+(3, 1), 
+(4, 3), 
+(5, 5), 
+(3, 8), 
+(4, 8); 
