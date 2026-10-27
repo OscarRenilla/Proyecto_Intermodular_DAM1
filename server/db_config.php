@@ -1,9 +1,9 @@
 <?php
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'nombre_bbdd');
-define('DB_USER', 'usuario');
-define('DB_PASS', 'contraseña');
+define('DB_NAME', 'cronoss');
+define('DB_USER', 'postgres');
+define('DB_PASS', 'postgres');
 
 function conectarBBDD(): PDO {
 
@@ -21,15 +21,15 @@ function conectarBBDD(): PDO {
 
     ];
 
-    try{    
+    try {
 
         $conn = new PDO($dsn, null, null, $opciones);
         return $conn;
 
-    }catch(PDOException $e){
+    } catch (PDOException $e) {
         http_response_code(500);
 
-        echo json_encode(['error' => 'Error con la conexión a la base de datos' . $e -> getMessage()]);
+        echo json_encode(['error' => 'Error con la conexión a la base de datos: ' . $e->getMessage()]);
 
         exit;
     }
